@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid Trunk Volume Calculator</title>
+    <link rel="stylesheet" href="tronco-piramid.css">
+</head>
+<body>
+    <header>
+        <h1>Pyramid Trunk Volume Calculator</h1>
+    </header>
+    <main>
+        <section class="shape-selection">
+            <h2>Enter Dimensions:</h2>
+            <form id="pyramid-trunk-form">
+                <div class="input-container">
+                    <label for="baseArea">Base Area:</label>
+                    <input type="number" id="baseArea" placeholder="Base Area (in square units)">
+                </div>
+                <div class="input-container">
+                    <label for="topArea">Top Area:</label>
+                    <input type="number" id="topArea" placeholder="Top Area (in square units)">
+                </div>
+                <div class="input-container">
+                    <label for="height">Height:</label>
+                    <input type="number" id="height" placeholder="Height (in units)">
+                </div>
+                <button type="button" onclick="calculatePyramidTrunkVolume()">Calculate</button>
+            </form>
+        </section>
+
+        <section class="calculation">
+            <h2>Result:</h2>
+            <div id="volume-result">
+                <!-- Result will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="calculator.js"></script>
+    <script>
+        function calculatePyramidTrunkVolume() {
+            const baseArea = parseFloat(document.getElementById("baseArea").value);
+            const topArea = parseFloat(document.getElementById("topArea").value);
+            const height = parseFloat(document.getElementById("height").value);
+            const volume = calculatePyramidTrunkVolume(baseArea, topArea, height);
+            displayResult(volume);
+        }
+    </script>
+</body>
+</html>

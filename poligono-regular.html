@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Polygon Area Calculator</title>
+    <link rel="stylesheet" href="poligomo.css">
+</head>
+<body>
+    <header>
+        <h1>Regular Polygon Area Calculator</h1>
+    </header>
+    <main>
+        <section class="shape-selection">
+            <h2>Choose Number of Sides:</h2>
+            <div class="input-container">
+                <label for="numSides">Number of Sides:</label>
+                <select id="numSides">
+                    <option value="3">Triangle</option>
+                    <option value="4">Quadrilateral</option>
+                    <option value="5">Pentagon</option>
+                    <option value="6">Hexagon</option>
+                    <option value="7">Heptagon</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <h2>Enter Side Length:</h2>
+            <div class="input-container">
+                <label for="sideLength">Side Length:</label>
+                <input type="number" id="sideLength" placeholder="Side Length (in units)">
+            </div>
+            <button type="button" onclick="calculatePolygonArea()">Calculate</button>
+        </section>
+
+        <section class="calculation">
+            <h2>Result:</h2>
+            <div id="area-result">
+                <!-- Result will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="poligomo.js"></script>
+</body>
+</html>

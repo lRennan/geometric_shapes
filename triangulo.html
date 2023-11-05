@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Área - Triângulo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora de Área - Triângulo</h1>
+    </header>
+    <main>
+        <section class="shape-form">
+            <h2>Calcular a Área de um Triângulo</h2>
+            <form id="triangle-form">
+                <label for="base">Base do Triângulo:</label>
+                <input type="number" id="base" required>
+                <label for="height">Altura do Triângulo:</label>
+                <input type="number" id="height" required>
+                <button type="submit">Calcular</button>
+            </form>
+        </section>
+
+        <section class="calculation">
+            <h2>Área:</h2>
+            <div id="area-result">
+                <!-- Result will be displayed here -->
+            </div>
+        </section>
+    </main>
+    <script src="triangulo.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Sector Area Calculator</title>
+    <link rel="stylesheet" href="sector.css">
+</head>
+<body>
+    <header>
+        <h1>Circular Sector Area Calculator</h1>
+    </header>
+    <main>
+        <section class="input-container">
+            <label for="radius">Enter Radius of Larger Circle:</label>
+            <input type="number" id="radius" placeholder="Radius of Larger Circle (in units)">
+            <label for="angle">Enter Angle (in degrees):</label>
+            <input type="number" id="angle" placeholder="Angle (in degrees)">
+            <button id="calculateButton" onclick="calculateSectorArea()">Calculate</button>
+        </section>
+
+        <section class="calculation">
+            <h2>Result:</h2>
+            <div id="areaResult">
+                <!-- Result will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="setor.js"></script>
+</body>
+</html>

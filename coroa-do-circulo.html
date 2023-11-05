@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Crown Area Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Circle Crown Area Calculator</h1>
+    </header>
+    <main>
+        <section class="shape-selection">
+            <h2>Enter Radii:</h2>
+            <div class="input-container">
+                <label for="outerRadius">Outer Radius:</label>
+                <input type="number" id="outerRadius" placeholder="Outer Radius (in units)">
+            </div>
+            <div class="input-container">
+                <label for="innerRadius">Inner Radius:</label>
+                <input type="number" id="innerRadius" placeholder="Inner Radius (in units)">
+            </div>
+            <button type="button" onclick="calculateCircleCrownArea()">Calculate</button>
+        </section>
+
+        <section class="calculation">
+            <h2>Result:</h2>
+            <div id="area-result">
+                <!-- Result will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function calculateCircleCrownArea() {
+            const outerRadius = parseFloat(document.getElementById("outerRadius").value);
+            const innerRadius = parseFloat(document.getElementById("innerRadius").value);
+
+            if (outerRadius >= innerRadius) {
+                const area = Math.PI * (Math.pow(outerRadius, 2) - Math.pow(innerRadius, 2));
+                displayResult(area.toFixed(2));
+            } else {
+                displayResult("Outer radius must be greater than or equal to inner radius.");
+            }
+        }
+
+        function displayResult(area) {
+            const resultElement = document.getElementById("area-result");
+            resultElement.textContent = `Area: ${area}`;
+        }
+    </script>
+</body>
+</html>
